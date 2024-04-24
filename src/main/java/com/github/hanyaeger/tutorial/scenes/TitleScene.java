@@ -12,7 +12,6 @@ import javafx.scene.text.FontWeight;
 
 public class TitleScene extends StaticScene {
 
-    @SuppressWarnings("unused")
     private Waterworld waterworld;
 
     public TitleScene(Waterworld waterworld){
@@ -25,11 +24,12 @@ public class TitleScene extends StaticScene {
             new Coordinate2D(getWidth() / 2, getHeight() / 2),
             "Waterworld"
         );
+
         waterworldText.setAnchorPoint(AnchorPoint.CENTER_CENTER);
         waterworldText.setFill(Color.DARKBLUE);
         waterworldText.setFont(Font.font("Roboto", FontWeight.SEMI_BOLD, 80));
         addEntity(waterworldText);
-        addEntity(new StartButton(new Coordinate2D(getWidth() / 2, getHeight() / 2), waterworld));
+        addEntity(new StartButton(new Coordinate2D(getWidth() / 2, getHeight() * 3 / 4), waterworld));
 
     }
     
@@ -41,3 +41,4 @@ public class TitleScene extends StaticScene {
     }
 
 }
+ 

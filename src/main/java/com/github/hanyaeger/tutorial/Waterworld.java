@@ -18,7 +18,6 @@ public void setupGame() {
     public void setupScenes() {
         addScene(0, new TitleScene(this));
         addScene(1, new GameLevel(this));
-        // TODO add more scenes
     }
     
 
