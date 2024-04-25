@@ -3,6 +3,7 @@ package com.github.hanyaeger.tutorial;
 import com.github.hanyaeger.api.*;
 import com.github.hanyaeger.tutorial.scenes.TitleScene;
 import com.github.hanyaeger.tutorial.scenes.GameLevel;
+import com.github.hanyaeger.tutorial.scenes.GameOver;
 
 public class Waterworld extends YaegerGame{
     public static void main(String[] args) {
@@ -18,6 +19,7 @@ public void setupGame() {
     public void setupScenes() {
         addScene(0, new TitleScene(this));
         addScene(1, new GameLevel(this));
+        addScene(2, new GameOver(this));
     }
     
 

@@ -1,4 +1,4 @@
-package com.github.hanyaeger.tutorial.scenes;
+package com.github.hanyaeger.tutorial.entities.text.buttons;
 
 import com.github.hanyaeger.api.AnchorPoint;
 import com.github.hanyaeger.api.Coordinate2D;
@@ -14,8 +14,8 @@ import javafx.scene.text.FontWeight;
 
 public class StartButton extends TextEntity implements MouseButtonPressedListener, MouseEnterListener, MouseExitListener {
     private Waterworld waterworld;
-    public StartButton(Coordinate2D initialLocation, Waterworld waterworld){
-        super(initialLocation,"Play game");
+    public StartButton(Coordinate2D initialLocation, Waterworld waterworld, String text){
+        super(initialLocation, text);
         setFill(Color.PURPLE);
         setFont(Font.font("Roboto", FontWeight.BOLD, 30));
         setAnchorPoint(AnchorPoint.CENTER_CENTER);

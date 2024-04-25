@@ -5,6 +5,7 @@ import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.entities.impl.TextEntity;
 import com.github.hanyaeger.api.scenes.*;
 import com.github.hanyaeger.tutorial.Waterworld;
+import com.github.hanyaeger.tutorial.entities.text.buttons.StartButton;
 
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
@@ -29,7 +30,7 @@ public class TitleScene extends StaticScene {
         waterworldText.setFill(Color.DARKBLUE);
         waterworldText.setFont(Font.font("Roboto", FontWeight.SEMI_BOLD, 80));
         addEntity(waterworldText);
-        addEntity(new StartButton(new Coordinate2D(getWidth() / 2, getHeight() * 3 / 4), waterworld));
+        addEntity(new StartButton(new Coordinate2D(getWidth() / 2, getHeight() * 3 / 4), waterworld, "Play Game"));
 
     }
     

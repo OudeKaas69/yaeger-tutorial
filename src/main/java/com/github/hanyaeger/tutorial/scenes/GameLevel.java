@@ -3,11 +3,11 @@ package com.github.hanyaeger.tutorial.scenes;
 import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.scenes.DynamicScene;
 import com.github.hanyaeger.tutorial.Waterworld;
-import com.github.hanyaeger.tutorial.entities.Swordfish;
+import com.github.hanyaeger.tutorial.entities.Hanny;
+import com.github.hanyaeger.tutorial.entities.swordfish.SwordFish;
 
 public class GameLevel extends DynamicScene {
     
-    @SuppressWarnings("unused")
     private Waterworld waterworld;
 
     public GameLevel(Waterworld waterworld){
@@ -22,6 +22,7 @@ public class GameLevel extends DynamicScene {
 
     @Override
     public void setupEntities() {
-        addEntity(new Swordfish(new Coordinate2D(getWidth(), getHeight() / 2)));
+        addEntity(new SwordFish(new Coordinate2D(getWidth(), getHeight() / 2)));
+        addEntity(new Hanny(new Coordinate2D(getWidth() / 2, getHeight() / 2), waterworld));
     }
 }
